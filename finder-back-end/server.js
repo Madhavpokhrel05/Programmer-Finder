@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
 const PORT = 3003
+<<<<<<< HEAD
+const projects = require('./controllers/projects.js')
+=======
 const projectController = require('./controllers/projects.js')
+>>>>>>> a33a70be516b1dc04636271d7bcaef869784ae35
 const mongoose = require('mongoose')
 const cors = require('cors')
 
