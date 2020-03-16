@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
 const PORT = 3003
+<<<<<<< HEAD
 const projects = require('./controllers/projects.js')
+=======
+const projectController = require('./controllers/projects.js')
+>>>>>>> a33a70be516b1dc04636271d7bcaef869784ae35
 const mongoose = require('mongoose')
 const cors = require('cors')
 
@@ -22,11 +26,11 @@ app.use(cors(corsOptions))
 
 mongoose.connection.on('error', error => { console.log(error.message + 'Mongo running properly?')})
 mongoose.connection.on('disconnected', ()=> console.log('Mongoose Disconnected'))
-mongoose.connect('mongodb://localhost:27017/gtps', {useUnifiedTopology: true, useNewUrlParser: true})
+mongoose.connect('mongodb://localhost:27017/projects', {useUnifiedTopology: true, useNewUrlParser: true})
 mongoose.connection.once('open', () => {console.log('Mongoose Connected')})
 
 /* Put our routes below */
-app.use('/gtps', gtpController)
+app.use('/project', projectController)
 
 app.listen(PORT, ()=> {
     console.log('Everything is going according to plan at port: ', PORT)
