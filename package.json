@@ -1,5 +1,5 @@
 {
-  "name": "pwd",
+  "name": "Programmer-Finder",
   "version": "1.0.0",
   "description": "This is the application will help you to find the programmer in your areas.",
   "main": "index.js",
@@ -15,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/Madhavpokhrel05/Programmer-Finder/issues"
   },
-  "homepage": "https://github.com/Madhavpokhrel05/Programmer-Finder#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/Madhavpokhrel05/Programmer-Finder#readme"
 }
