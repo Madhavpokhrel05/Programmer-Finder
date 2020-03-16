@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 3003
-const gtpController = require('./controllers/gtp.js')
+const projects = require('./controllers/projects.js')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
