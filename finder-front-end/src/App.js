@@ -5,7 +5,7 @@ import Projects from './components/Projects'
 function App() {
   return (
     <div>
-      <h1>Programmer Finder Application! </h1>
+      <h1>Programmer Finder Application!</h1>
       <Users/>
       <Projects/>
     </div>
