@@ -20,7 +20,7 @@ export default class UpdateUser extends Component {
   componentDidMount(){
     if (this.props.urse) {
       this.setState({
-        username: this.props.user.username,
+        username: this.props.user.username,ss
         password: this.props.user.password,
         projects: this.props.user.projects,
         _id: this.props.user._id
