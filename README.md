@@ -1,3 +1,4 @@
 # Programmer-Finder
-This is the application will help you to find the programmer in your areas.
+This application will help you to find other programmers in your area.
+
 Members: Alfonso Garcia, Vince Lanzilotti, and Madhav Pokhrel
