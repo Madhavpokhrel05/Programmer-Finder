@@ -4,7 +4,7 @@ import Users from './components/Users'
 function App() {
   return (
     <div>
-      <h1>Programmer Finder Application! </h1>
+      <h1>Programmer Finder Application!</h1>
       <Users/>
     </div>
   )
