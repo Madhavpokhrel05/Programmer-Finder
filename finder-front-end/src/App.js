@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 function App() {
   return (
@@ -16,8 +17,17 @@ function App() {
           Learn React
         </a>
       </header>
+=======
+import Users from './components/Users'
+
+function App() {
+  return (
+    <div>
+      <h1>Programmer Finder Application!</h1>
+      <Users/>
+>>>>>>> 5a2f68e47a933448377621d048ee0027431fba97
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

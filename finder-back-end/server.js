@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
 const PORT = 3003
+// <<<<<<< HEAD
+const projects = require('./controllers/projects.js')
+// =======
 const projectController = require('./controllers/projects.js')
 const mongoose = require('mongoose')
 const cors = require('cors')
