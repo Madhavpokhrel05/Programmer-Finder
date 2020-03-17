@@ -1,15 +1,25 @@
 const express = require('express')
-const app = express()
-const PORT = 3003
-
-const projects = require('./controllers/projects.js')
-
-const projectController = require('./controllers/projects.js')
-
 const mongoose = require('mongoose')
+const session = require('express-session')
+const bcrypt = require ('bcrypt')
+const User = require('../models/users.js')
+const PORT = process.env.PORT
+const mongodbURI = process.env.MONGODBURI
+const app = express()
+require('dotenv').config()
 const cors = require('cors')
+const blogsController = require('./controllers/blogs.js')
+const hashedString = bcrypt.hashSync('Teamwork', bcrypt.genSaltSync(10))
 
-// Middleware //
+const sessionsController = require('./controllers/sessions.js')
+app.use('/sessions', sessionsController)
+
+const usersController = require('./controllers/users.js')
+app.use('/users', usersController)
+
+const projectsController = require('./controllers/projects.js')
+app.use('/projects', projectsController)
+
 app.use(express.json())
 
 const whitelist = ['http://localhost:3000']
@@ -22,16 +32,26 @@ const corsOptions = {
     }
   }
 }
+
 app.use(cors(corsOptions))
 
-mongoose.connection.on('error', error => { console.log(error.message + 'Mongo running properly?')})
-mongoose.connection.on('disconnected', ()=> console.log('Mongoose Disconnected'))
-mongoose.connect('mongodb://localhost:27017/projects', {useUnifiedTopology: true, useNewUrlParser: true})
-mongoose.connection.once('open', () => {console.log('Mongoose Connected')})
+app.use(session({
+  secret: process.env.secret,
+  resave: false,
+  saveUninitialized: false
+}))
 
-/* Put our routes below */
-app.use('/project', projectController)
+mongoose.connection.on('error', err => console.log(err.message + ' is Mongod not running?'))
+mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
 
-app.listen(PORT, ()=> {
-    console.log('Everything is going according to plan at port: ', PORT)
+
+mongoose.connect('mongodb://localhost:27017/blogs', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connection.once('open', ()=>{
+    console.log('connected to mongoose...')
+})
+
+app.use('/blogs', blogsController)
+
+app.listen(PORT, () => {
+  console.log('listening on port', PORT)
 })
