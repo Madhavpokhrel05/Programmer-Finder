@@ -6,7 +6,7 @@ const User = require('../models/users.js')
 const PORT = process.env.PORT
 const mongodbURI = process.env.MONGODBURI
 const app = express()
-<<<<<<< HEAD
+
 require('dotenv').config()
 const cors = require('cors')
 const blogsController = require('./controllers/blogs.js')
@@ -20,15 +20,14 @@ app.use('/users', usersController)
 
 const projectsController = require('./controllers/projects.js')
 app.use('/projects', projectsController)
-=======
-const PORT = 3003
-// <<<<<<< HEAD
+
+
+
 const projects = require('./controllers/projects.js')
-// =======
+
 const projectController = require('./controllers/projects.js')
-const mongoose = require('mongoose')
-const cors = require('cors')
->>>>>>> d25fa6b4c5422dff78b93b3fc6680ea2e88862a0
+
+
 
 app.use(express.json())
 
