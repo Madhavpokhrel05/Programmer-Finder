@@ -105,7 +105,7 @@ class Projects extends React.Component {
   render(){
     return(
       <div>
-        <h1>Projects</h1>
+        <h2>Projects</h2>
         <NewProject handleAddProject={this.handleAddProject}/>
         {this.state.projects.map(project => (
           <Project project={project} key={project._id} handleUpdateProject={this.handleUpdateProject} deleteProject={this.deleteProject}/>
