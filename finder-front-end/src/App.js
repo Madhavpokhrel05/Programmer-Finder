@@ -1,23 +1,20 @@
 import React from 'react';
-
+import Users from './components/Users'
+import Projects from './components/Projects'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-md-8">
+        <h1 className="heading-title">Programmer Finder Application! </h1>
+        <Users/>
+        <Projects/>
+
+        </div>
+      </div>
+      </div>
     </div>
   )
 }
-
 export default App

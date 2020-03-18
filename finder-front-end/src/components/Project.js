@@ -20,7 +20,7 @@ export default class Project extends Component {
       <div>
         {this.state.showForm ? <UpdateProject handleUpdatProject={this.props.handleUpdateProject} project={this.props.project} toggleForm={this.toggleForm}/> : <h1><a href={this.props.project.url}>{this.props.project.title}</a></h1>}
         <h4 onClick={this.toggleForm}>Update Project!</h4>
-        <button onClick={()=>this.props.deleteProject(this.state)}>Delete Project</button>
+        <button onClick={()=>this.props.deleteProject(this.state)}>Delete User</button>
       </div>
     );
   }

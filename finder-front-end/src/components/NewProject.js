@@ -22,25 +22,45 @@ class App extends React.Component{
       <div>
         <form onSubmit={(event)=>this.props.handleAddProject(event,this.state)}>
 
-          <input type="text"
-          placeholder="Enter Project Name"
+        <div className="input-group mb-3">
+          <input type="text"   placeholder="Enter Project Name"
           name="name"
           value={this.state.name}
-          onChange={this.handleChange} />
+          onChange={this.handleChange} className="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2" />
+          <div className="input-group-append">
+            <span className="input-group-text" id="basic-addon2"><i className="fa fa-object-ungroup"></i></span>
+          </div>
+        </div>
 
-          <input type="text"
-          placeholder="Enter Project Description"
-          name="description"
-          value={this.state.description}
-          onChange={this.handleChange} />
+          <div className="input-group mb-3">
+            <input type="text"
+            placeholder="Enter Project URL"
+            name="url"
+            value={this.state.url}
+            onChange={this.handleChange}
+             className="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2" />
+            <div className="input-group-append">
+              <span className="input-group-text" id="basic-addon2"><i className="fa fa-link"></i></span>
+            </div>
+          </div>
 
-          <input type="text"
-          placeholder="Enter Project URL"
-          name="url"
-          value={this.state.url}
-          onChange={this.handleChange} />
 
-          <input type="submit" />
+
+          <div className="input-group mb-3">
+            <textarea  rows="10"
+
+            placeholder="Enter Project Description"
+            name="description"
+            value={this.state.description}
+            onChange={this.handleChange}
+
+             className="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2" ></textarea>
+
+          </div>
+
+
+          <input type="submit" value="submit" className="btn btn-info text-uppercase" />
+
         </form>
       </div>
     )
