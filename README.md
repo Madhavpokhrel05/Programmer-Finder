@@ -43,4 +43,6 @@ Application is use full CRUD app using several technologies.
 
 
 ### Team Members to build this Application
-  Alfonso Garcia, Vince Lanzilotti, and Madhav Pokhrel
+  1.  Alfonso Garcia
+  2. Vince Lanzilotti and 
+  3. Madhav Pokhrel
