@@ -6,17 +6,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1.heading-title {
-    font-size: 35px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-span#basic-addon2 {
-    width: 50px;
-    display: inline-block;
-    font-size: 19px;
-    padding: 0;
-    line-height: 34px;
+.show {
+    display: block;
 }

@@ -1,7 +1,5 @@
-# Programmer-Finder
+#Project Tracker!
 
-This application will help you to find other programmers in your area.
-
-This application will help you to find other programmers in your area as well as keep track of any projects you have.
+This application is designed to help programmers keep track of their on going projects!
 
 Members: Alfonso Garcia, Vince Lanzilotti, and Madhav Pokhrel
