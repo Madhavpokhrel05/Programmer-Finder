@@ -3,12 +3,12 @@ const Project = require('../models/project.js')
 
 // I.N.D.U.C.E.S. //
 // Index Route //
-project.get('/', (req, res) => {
-  Project.find({}, (err, foundProject) => {
+projects.get('/', (req, res) => {
+  Project.find({}, (err, foundProjects) => {
     if (err) {
       res.status(400).json({ error: err.message })
     }
-    res.status(200).json(foundProject)
+    res.status(200).json(foundProjects)
   })
 })
 

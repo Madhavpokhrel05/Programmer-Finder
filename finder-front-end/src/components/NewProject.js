@@ -75,7 +75,7 @@ class New extends React.Component{
             className="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2" ></textarea>
           </div>
 
-          <input type="submit" value="submit" className="btn btn-info text-uppercase" href='/'/>
+          <input type="submit" value="submit" className="btn btn-info text-uppercase" href='/Show'/>
         </form>
       </div>
     )

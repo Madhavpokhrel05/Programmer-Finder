@@ -49,7 +49,8 @@ class App extends React.Component {
             <div>
             {this.state.projects.name}
             </div>
-             <Route path='/new' exact component={Projects} />
+            <Link to="/new">New Project</Link>
+<Route path='/new' component={Projects}/>
             </div>
           </div>
           </div>
