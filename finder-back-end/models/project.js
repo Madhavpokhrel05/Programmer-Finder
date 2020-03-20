@@ -14,8 +14,8 @@ const projectSchema = mongoose.Schema({
       type: String
     },
 
-    languages: [{
-      Type: String
+    location: [{
+      type: String
     }]
 },
 {
