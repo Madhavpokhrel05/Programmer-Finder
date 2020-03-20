@@ -40,7 +40,9 @@ class Projects extends React.Component {
         projects: copyProjects,
         name: '',
         description: '',
-        url: ''
+        url: '',
+        location: '',
+        timestamp: ''
       })
     } catch (error) {
       console.log(error);

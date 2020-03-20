@@ -1,14 +1,16 @@
 import React from 'react';
 
-class App extends React.Component{
+class New extends React.Component{
   constructor(props){
     super(props)
     this.state={
       name: '',
       description: '',
-      url: ''
+      url: '',
+      location: ''
     }
     this.handleChange = this.handleChange.bind(this)
+    this.handleAddProject = this.handleAddProject.bind(this)
   }
 
   handleChange(event){
@@ -16,6 +18,13 @@ class App extends React.Component{
       [event.target.name]: event.target.value
     })
   }
+
+  handleAddProject(project) {
+   const copyProject = [project, ...this.state.project]
+   this.setState({
+     project: copyProject
+   })
+ }
 
   render(){
     return(
@@ -44,23 +53,29 @@ class App extends React.Component{
             </div>
           </div>
 
+          <div className="input-group mb-3">
+            <input type="text"
+            placeholder="Enter Project Location"
+            name="location"
+            value={this.state.location}
+            onChange={this.handleChange}
+             className="form-control"  aria-label="Project's Location" aria-describedby="basic-addon2" />
+            <div className="input-group-append">
+              <span className="input-group-text" id="basic-addon2"><i className=""></i></span>
+            </div>
+          </div>
 
 
           <div className="input-group mb-3">
             <textarea  rows="10"
-
             placeholder="Enter Project Description"
             name="description"
             value={this.state.description}
             onChange={this.handleChange}
-
-             className="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2" ></textarea>
-
+            className="form-control"  aria-label="Recipient's username" aria-describedby="basic-addon2" ></textarea>
           </div>
 
-
-          <input type="submit" value="submit" className="btn btn-info text-uppercase" />
-
+          <input type="submit" value="submit" className="btn btn-info text-uppercase" href='/'/>
         </form>
       </div>
     )
@@ -68,4 +83,4 @@ class App extends React.Component{
 
 }
 
-export default App
+export default New
