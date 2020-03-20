@@ -1,5 +1,7 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Projects from './components/Projects'
+import New from './components/NewProject.js'
 
 let baseURL
 if (process.env.NODE_ENV === 'projects') {
@@ -12,7 +14,7 @@ class App extends React.Component {
     constructor(props) {
        super(props)
        this.state = {
-         programs: []
+         projects: []
        }
        this.getPrograms = this.getPrograms.bind(this)
        this.getProgram = this.getProgram.bind(this)
@@ -24,34 +26,35 @@ class App extends React.Component {
 
      async getPrograms (){
        try {
-         let response = await fetch(`${baseURL}/programs`)
+         let response = await fetch(`${baseURL}/projects`)
          let data = await response.json()
-         this.setState({program: data})
+         this.setState({projects: data})
        }catch(e){
          console.error(e)
        }
      }
-     getProgram(program) {
-         this.setState({program: program})
+     getProgram(project) {
+         this.setState({project: project})
      }
 
 
   render () {
     return (
+        <Router>
         <div>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
-            <h1 className="heading-title">Program Manager!</h1>
+            <h1 className="heading-title">Project Manager!</h1>
             <div>
-            {this.state.program.name}
+            {this.state.projects.name}
             </div>
-            <a>New Project</a>
-            <Projects/>
+             <Route path='/new' exact component={Projects} />
             </div>
           </div>
           </div>
         </div>
+         </Router>
     )
   }
 }
