@@ -1,5 +1,5 @@
 import React from 'react';
-import Users from './components/Users'
+
 import Projects from './components/Projects'
 
 function App() {
